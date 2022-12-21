@@ -8,7 +8,7 @@ tglBtn.addEventListener("click", () => {
 
 const qrImageContainer = document.getElementById("qr-image");
 const generated = document.getElementById("generated");
-const qrGenBtn = document.getElementById("qr-gen");
+const qrGenForm = document.getElementById("qr-form");
 
 const inputBox = document.getElementById("text-content");
 const selectBox = document.getElementById("qr-size");
@@ -43,7 +43,8 @@ const displayDownBtn = () => {
     generated.appendChild(downBtn);
 };
 
-const handleGenQr = () => {
+const handleGenQr = (e) => {
+    e.preventDefault();
     //clear previous qr
     clearGenerated();
     //gen new qr
@@ -56,4 +57,4 @@ const handleGenQr = () => {
     setTimeout(displayDownBtn, 50); //waiting 50ms otherwise it doesnt exist in dom
 };
 
-qrGenBtn.addEventListener("click", handleGenQr);
+qrGenForm.addEventListener("submit", handleGenQr);

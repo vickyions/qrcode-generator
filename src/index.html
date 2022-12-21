@@ -75,7 +75,7 @@
                         QRCode. Which then can be scanned or downloaded to be
                         shared or used later.
                     </p>
-                    <form class="max-w-[400px] mx-auto md:mx-0">
+                    <form class="max-w-[400px] mx-auto md:mx-0" id="qr-form">
                         <div>
                             <label
                                 for="text-content"
@@ -88,6 +88,7 @@
                                 name="text-content"
                                 id="text-content"
                                 placeholder="Paste here"
+                                autofocus
                                 required
                             />
                         </div>
@@ -114,7 +115,7 @@
                         </div>
                         <button
                             id="qr-gen"
-                            type="button"
+                            type="submit"
                             class="px-8 py-2 mt-5 w-full w-max-[400px] rounded bg-navy-400 text-yellow-200 cursor-pointer hover:text-green-600 hover:shadow-md hover:shadow-grey-200 focus:outline focus:outline-offset-3"
                         >
                             Generate QR
