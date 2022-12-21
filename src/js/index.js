@@ -19,7 +19,6 @@ downBtn.classList =
     "px-8 py-2 mt-10 max-w-[400px] rounded bg-red-400 text-yellow-200 cursor-pointer hover:text-green-600 hover:shadow-md hover:shadow-grey-200 block text-center mx-auto md:mb-10 focus:outline focus:outline-3";
 
 const generateQr = (text, size) => {
-    console.log(text);
     return new QRCode(qrImageContainer, {
         text,
         width: size,
@@ -37,7 +36,6 @@ const clearGenerated = () => {
 
 const displayDownBtn = () => {
     const downLink = qrImageContainer.querySelector("img").src;
-    console.log(downLink);
     downBtn.href = downLink;
     downBtn.download = "qrcode";
     generated.appendChild(downBtn);
