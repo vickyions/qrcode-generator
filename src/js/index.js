@@ -36,6 +36,8 @@ const clearGenerated = () => {
 
 const displayDownBtn = () => {
     const downLink = qrImageContainer.querySelector("img").src;
+    //add a light border around it for easy scanned
+    qrImageContainer.querySelector("img").classList.add('p-3', 'bg-white');
     downBtn.href = downLink;
     downBtn.download = "qrcode";
     generated.appendChild(downBtn);
