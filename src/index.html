@@ -6,6 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta author="Vicky Soni" />
         <meta description="A simple QR Code generator" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;600;700&display=swap"
+            rel="stylesheet"
+        />
         <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -24,9 +30,41 @@
             href="./imgs/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <title>QR Generater</title>
         <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            "peach-600": "#FF8787",
+                            "peach-200": "#F8C4B4",
+                            "green-200": "#E5EBB2",
+                            "green-600": "#BCE29E",
+                            "grey-200": "#525252",
+                            "grey-400": "#414141",
+                            "grey-600": "#313131",
+                            "red-600": "#CA3E47",
+                            "red-400": "#D61C4E",
+                            "navy-400": "#293462",
+                            "yellow-200": "#FEDB39",
+                            "blue-100": "#1CD6CE",
+                        },
+                        fontFamily: {
+                            sans: ["Signika Negative", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
         <link rel="stylesheet" href="styles.css" />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+            integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script type="text/javascript" src="./js/index.js" defer></script>
+        <title>QR Generater</title>
     </head>
     <body>
         <h1 class="m-3 p-2 text-5xl">Hello</h1>
